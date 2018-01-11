@@ -1,13 +1,6 @@
 {
   "dataApp": [
     {
-      "id": 0,
-      "name": "Oracle VM VirtualBox",
-      "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",
-      "nick": "virtualbox",
-      "kat": "tkj"
-    },
-    {
       "id": 1,
       "name": "Oracle VM VirtualBox",
       "desc": "Virtualbox merupakan produk aplikasi virtualisasi yang handal untuk jaringan enterprise maupun untuk kalangan non-enterprise. Tak hanya memiliki banyak fitur yang canggih, Virtualbox juga satu-satunya solusi gratis perangkat lunak virtualisasi yang tersedia dengan lisensi GNU GPL yang dikembangkan oleh Oracle.",

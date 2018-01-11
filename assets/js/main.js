@@ -139,7 +139,7 @@ function jurusanApa(jur){
     break;
     case "tav":
     jurusan.push("TAV / TEDK"); 
-    jurusan.push("Teknik Audio Video / Teknik Elektronika Daya ");
+    jurusan.push("Teknik Audio Video / Teknik Elektronika Daya dan Komunikasi");
     break;
     case "tiptl":
     jurusan.push("TIPTL / TTL"); 
@@ -151,11 +151,11 @@ function jurusanApa(jur){
     break;
     case "tp":
     jurusan.push("TP / TFLM"); 
-    jurusan.push("Teknik Komputer Jaringan / Teknik Fabrikasi Logam dan Manufaktur");
+    jurusan.push("Teknik Permesinan / Teknik Fabrikasi Logam dan Manufaktur");
     break;
     case "tkr":
     jurusan.push("TKR / TMPO"); 
-    jurusan.push("Teknik Kenedaraan Ringan / Teknik Managemen dan Perawatan Otomotif");
+    jurusan.push("Teknik Kendaraan Ringan / Teknik Managemen dan Perawatan Otomotif");
     break;
     default:
   }
