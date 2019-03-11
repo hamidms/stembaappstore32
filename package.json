@@ -1,25 +1,27 @@
 {
   "name": "stembaappsstore",
-  "version": "2.1.7",
+  "version": "3.1.2",
   "description": "This is Stemba App Store For Stemba OS",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "package-linux": "electron-packager . stembaappstore --overwrite --asar --platform=linux --arch=x64 --icon=assets/img/app.png --prune=true --out=release-builds"
   },
-  "author": "Alifian Adexe",
+  "author": "Hamid Machfudin Sukardi",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "electron": "^1.7.9",
-    "jquery": "^3.2.1"
+    "bootstrap": "^3.4.1",
+    "electron": "^4.0.8",
+    "jquery": "^3.3.1",
+    "font-awesome": "^4.7.0",
+    "popper.js": "^1.14.7"
   },
   "devDependencies": {
-    "electron-packager": "^10.1.1"
+    "electron-packager": "^13.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alifianadexe/stembaappstore.git"
+    "url": "git+https://github.com/hamidms/stembaappstore2.git"
   },
   "keywords": [
     "this",
@@ -27,7 +29,7 @@
     "project"
   ],
   "bugs": {
-    "url": "https://github.com/alifianadexe/stembaappstore/issues"
+    "url": "https://github.com/hamidms/stembaappstore2/issues"
   },
-  "homepage": "https://github.com/alifianadexe/stembaappstore#readme"
+  "homepage": "https://github.com/hamidms/stembaappstore2#readme"
 }
