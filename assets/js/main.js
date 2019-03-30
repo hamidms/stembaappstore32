@@ -15,16 +15,6 @@ function getRandomApp() {
     console.log(idRand);
     var idApp = dataApp[idRand].id;
 
-    // //var html = '\
-    // <div class="col-md-3 portfolio-item"> \
-    // <a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+idApp+')" data-target="#modalApp">\
-    // <img class="img-responsive" src="assets/img/'+dataApp[idApp].nick+'.png" style="width:250px;height:250px;" alt="Icon">\
-    // </a> \
-    // <h3><a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+idApp+')" data-target="#modalApp">'+dataApp[idApp].name+'</a></h3> \
-    // <p style="text-align:justify">'+(dataApp[idApp].desc).split('.')[0]+'. <a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+idApp+')" data-target="#modalApp">Lebih lanjut...</a></p> \
-    // </div> \
-    // ';
-
     var html = '\
     <div class="col-lg-4">\
     <div class="thumbnail">\
@@ -42,21 +32,6 @@ function getRandomApp() {
 }
 
 function modalApp(id) {
-
-  // var html = '\
-  // <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>\
-  // <h4><strong>'+dataApp[id].name+'</strong></h4><br> \
-  // <p style="align:justify">'+dataApp[id].desc+'</p> \
-  // <hr/> \
-  // <h5>Gambar:</h5> \
-  // <div style="width:100%"> \
-  // <img id="ss1" class="" src="assets/img/'+dataApp[id].nick+'-ss1.png" alt="SS1"> \
-  // <img id="ss2" class="imgss" src="assets/img/'+dataApp[id].nick+'-ss2.png" alt="SS2"> \
-  // <div style="clear:both"></div> \
-  // </div> \
-  // <hr/> \
-  // <button id="button-install" type="button" class="btn btn-primary" onclick="pasangApp(\''+dataApp[id].nick+'\')" style="width:100%">Pasang</button> \
-  //
 
   var html = '<div id="my' + dataApp[id].nick + '" class="modal fade" style="top:50px;" role="dialog"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header">\
   <button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">'+ dataApp[id].name + '</h4> \
@@ -100,57 +75,6 @@ function appCate(app) {
   $('#low-jurusan').html(catApp[1]);
 }
 
-function jurusanApp(jurusan) {
-
-  document.getElementById("services").style.display = "none";
-  document.getElementById("topapp").style.display = "none";
-
-  var namajur = jurusanApa(jurusan);
-
-  var appjur = findByKey(dataApp, 'kat', jurusan);
-  //$('#aplikasi').html('<span class="info">memproses data...</span>');
-  $('#top-application').html('');
-  $('#apps_detail').html('');
-
-  if (appjur.length == 0) {
-    $('#top-application').append('<p class="bg-danger">Belum ada data, akan di perbarui secepatnya :)</p>');
-  } else {
-    for (var i = 0; i < appjur.length; i++) {
-
-      // var html = '\
-      // <div class="col-sm-3 portfolio-item"> \
-      // <a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+(appjur[i].id-1)+')" data-target="#modalApp">\
-      // <img class="img-responsive" src="assets/img/app/'+appjur[i].nick+'.png" style="width:100%;height:100%;" alt="Icon">\
-      // </a> \
-      // <h3><a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+(appjur[i].id-1)+')" data-target="#modalApp">'+appjur[i].name+'</a></h3> \
-      // <p style="text-align:justify">'+(appjur[i].desc).split('.')[0]+'. <a href="javascript:void(0)" data-toggle="modal" onclick="modalApp('+(appjur[i].id-1)+')" data-target="#modalApp">Lebih lanjut...</a></p> \
-      // </div> \
-      // ';
-
-      var html = '\
-      <div class="col-sm-3">\
-      <div class="thumbnail">\
-      <img src="assets/img/'+ appjur[i].nick + '.png" class="img-thumbnail" width=200 alt="' + appjur[i].nick + '" >\
-      <h4>'+ appjur[i].name + '</h4>\
-      <br><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#my'+ appjur[i].nick + '">Read More</button>\
-      </div>\
-      </div>\
-      ';
-
-
-      modalApp(appjur[i].id);
-      $('#top-application').append(html);
-
-    }
-
-  }
-  $('#head-jurusan').html(namajur[0]);
-
-  $('#low-jurusan').html(namajur[1]);
-
-
-}
-
 // Application Category
 function appCat(cat) {
   var app = new Array();
@@ -178,56 +102,6 @@ function appCat(cat) {
     default:
   } return app;
 }
-
-function jurusanApa(jur) {
-  var jurusan = new Array();;
-  switch (jur) {
-    case "tkj":
-      jurusan.push("TKJ / TSIJA");
-      jurusan.push("Teknik Komputer Jaringan / Teknik Sistem Informasi Jaringan Aplikasi");
-      break;
-    case "tgb":
-      jurusan.push("TGB / TKJIJ");
-      jurusan.push("Teknik Gambar Bangunan / Teknik Konstruksi Jalan, Irigasi dan Jembatan");
-      break;
-    case "tkbb":
-      jurusan.push("TKBB / TKGSP");
-      jurusan.push("Teknik Konstruksi Batu Beton / Teknik Konstruksi Gedung , Sanitasi dan Perawatan");
-      break;
-    case "tei":
-      jurusan.push("TEI");
-      jurusan.push("Teknik Elektronika Industri");
-      break;
-    case "tav":
-      jurusan.push("TAV / TEDK");
-      jurusan.push("Teknik Audio Video / Teknik Elektronika Daya dan Komunikasi");
-      break;
-    case "tiptl":
-      jurusan.push("TIPTL / TTL");
-      jurusan.push("Teknik Instalasi Pemanfaatan Tenaga Listrik / Teknik Tenaga Listrik");
-      break;
-    case "tme":
-      jurusan.push("TME");
-      jurusan.push("Teknik Mekatronika");
-      break;
-    case "tp":
-      jurusan.push("TP / TFLM");
-      jurusan.push("Teknik Permesinan / Teknik Fabrikasi Logam dan Manufaktur");
-      break;
-    case "tkr":
-      jurusan.push("TKR / TMPO");
-      jurusan.push("Teknik Kendaraan Ringan / Teknik Managemen dan Perawatan Otomotif");
-      break;
-    default:
-  }
-  return jurusan;
-}
-
-// function pasangApp(nick){
-//   var sys = ign.sys();
-//   sys.exec('gksudo /opt/smkappstore/main.py '+nick+'');
-//   //sys.exec('firefox');
-// }
 
 //http://stackoverflow.com/questions/43171098/javascript-how-to-get-select-all-object-with-same-keys
 function findByKey(object, key, value) {
@@ -324,13 +198,3 @@ function install(nick) {
   })();
 
 }
-
-// function isConnect(){
-//  jQuery.ajaxSetup({async:false});
-//  re = "";
-
-//  r = Math.round(Math.random() * 10000);
-
-//  $.get("https://cdn4.iconfinder.com/data/icons/browser-ui-small-size-optimized-set/154/user-login-human-man-body-512.png",{subins:r},function(d){re = true; }).error(function(){re = false; });
-//  return re;
-// }
